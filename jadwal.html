@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jadwal Sholat</title>
+  <style>
+    body { font-family: Arial; background: #f4f4f4; margin: 0; }
+    header, footer { background: #2c3e50; color: white; text-align: center; padding: 20px; }
+    nav { background: #1abc9c; text-align: center; padding: 10px; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
+    section { max-width: 800px; margin: auto; background: white; padding: 20px; margin-top: 10px; border-radius: 10px; }
+    ul { list-style: none; padding: 0; }
+  </style>
+</head>
+<body>
+
+<header><h1>Jadwal Sholat</h1></header>
+
+<nav>
+  <a href="index.html">Beranda</a>
+  <a href="profil.html">Profil</a>
+  <a href="jadwal.html">Jadwal</a>
+  <a href="phbi.html">PHBI</a>
+  <a href="keuangan.html">Keuangan</a>
+  <a href="kegiatan.html">Kegiatan</a>
+  <a href="lokasi.html">Lokasi</a>
+  <a href="galeri.html">Galeri</a>
+  <a href="kontak.html">Kontak</a>
+</nav>
+
+<section>
+  <h2>Sholat Wajib</h2>
+  <ul id="jadwal-sholat">Memuat...</ul>
+
+  <h2>Jadwal Sholat Jumat</h2>
+  <p><strong>Imam::</strong> silahkan diisi.</p>
+  <p><strong>Khotib:</strong> silahkan diisi.</p>
+  <p><strong>Mudadzin:</strong> silahkan diisi</p>
+   <p><strong>Waktu:</strong> 11.45 WIB</p>
+</section>
+
+<footer><p>&copy; 2025 Masjid Jamie Nurul Baher</p></footer>
+
+<script>
+fetch("https://api.aladhan.com/v1/timingsByCity?city=Jakarta&country=Indonesia&method=11")
+.then(res => res.json())
+.then(data => {
+  const j = data.data.timings;
+  document.getElementById("jadwal-sholat").innerHTML = `
+    <li>Subuh: ${j.Fajr}</li>
+    <li>Dzuhur: ${j.Dhuhr}</li>
+    <li>Ashar: ${j.Asr}</li>
+    <li>Maghrib: ${j.Maghrib}</li>
+    <li>Isya: ${j.Isha}</li>`;
+});
+</script>
+
+</body>
+</html>
