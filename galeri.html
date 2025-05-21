@@ -2,54 +2,133 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <title>Galeri Foto</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beranda - Masjid Jamie Nurul Baher</title>
   <style>
-    body { font-family: Arial; background: #f4f4f4; margin: 0; }
-    header, footer { background: #2c3e50; color: white; text-align: center; padding: 20px; }
-    nav { background: #1abc9c; text-align: center; padding: 10px; }
-    nav a { color: white; margin: 0 10px; text-decoration: none; font-weight: bold; }
-    section { max-width: 900px; margin: auto; background: white; padding: 20px; margin-top: 10px; border-radius: 10px; }
-    .gallery { display: flex; flex-wrap: wrap; gap: 10px; }
-    .gallery img { width: 30%; border-radius: 10px; }
-    video { width: 50%; margin-top: 10px; border-radius: 5px; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #141414;
+      color: #fff;
+    }
+
+    header {
+      background: #1abc9c;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: white;
+    }
+
+    nav {
+      background: #16a085;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #1abc9c;
+    }
+
+    iframe {
+      display: block;
+      margin: 0 auto;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
+    footer {
+      background-color: #1abc9c;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: white;
+    }
   </style>
 </head>
 <body>
 
-<header><h1>Galeri Kegiatan Masjid</h1></header>
+  <header>Galeri Kegiatan Masjid</header>
 
-<nav>
-  <a href="index.html">Beranda</a>
-  <a href="profil.html">Profil</a>
-  <a href="jadwal.html">Jadwal</a>
-  <a href="phbi.html">PHBI</a>
-  <a href="keuangan.html">Keuangan</a>
-  <a href="kegiatan.html">Kegiatan</a>
-  <a href="lokasi.html">Lokasi</a>
-  <a href="galeri.html">Galeri</a>
-  <a href="kontak.html">Kontak</a>
-</nav>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="jadwal.html">Jadwal</a>
+    <a href="phbi.html">PHBI</a>
+    <a href="keuangan.html">Keuangan</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
 
-<section>
-  <div class="gallery">
-    <img src="https://via.placeholder.com/300x200?text=Kegiatan+1" alt="Kegiatan 1">
-    <img src="https://via.placeholder.com/300x200?text=Kegiatan+2" alt="Kegiatan 2">
-    <img src="https://via.placeholder.com/300x200?text=Kegiatan+3" alt="Kegiatan 3">
-  </div>
+  <section>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200?text=Kegiatan+1" alt="Kegiatan 1">
+      <img src="https://via.placeholder.com/300x200?text=Kegiatan+2" alt="Kegiatan 2">
+      <img src="https://via.placeholder.com/300x200?text=Kegiatan+3" alt="Kegiatan 3">
+    </div>
 
-  <h2>Video Kegiatan</h2>
+    <h2>Video Kegiatan</h2>
 
-<iframe width="800" height="450" 
-        src="https://www.youtube.com/embed/VtEPH_nTD7w" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        allowfullscreen>
+    <iframe width="300" height="200" src="https://www.youtube.com/embed/LBawLM4qw6U" frameborder="0" allowfullscreen></iframe>
+ <iframe width="300" height="200"
+ src="https://www.youtube.com/embed/VtEPH_nTD7w"
+      title="Video Kegiatan Masjid"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
     </iframe>
+  </section>
 
-  </video>
-</section>
+  <footer>&copy; 2025 Masjid Jamie Nurul Baher</footer>
 
-<footer><p>&copy; 2025 Masjid Jamie Nurul Baher</p></footer>
 </body>
 </html>

@@ -2,49 +2,99 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <title>Profil Masjid - Nurul Baher</title>
+  <title>Beranda - Masjid Jamie Nurul Baher</title>
   <style>
-    body { font-family: Arial; background: #f4f4f4; margin: 0; color: #333; }
-    header, footer { background: #2c3e50; color: white; text-align: center; padding: 20px; }
-    nav { background: #1abc9c; text-align: center; padding: 10px; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    section { padding: 20px; max-width: 800px; margin: auto; background: white; margin-top: 10px; border-radius: 10px; }
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      margin: 0;
+      color: #333;
+      font-size: 48px;
+      padding-top: 200px; /* ruang untuk header dan nav */
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    nav {
+      background: #1abc9c;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      top: 100px; /* tepat di bawah header */
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 36px;
+    }
+    section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+    }
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Media Query untuk perangkat kecil */
+    @media (max-width: 768px) {
+      body {
+        font-size: 24px;
+        padding-top: 180px;
+      }
+      header, nav {
+        padding: 10px;
+      }
+      nav a {
+        font-size: 20px;
+        margin: 5px;
+      }
+      section {
+        padding: 15px;
+      }
+    }
   </style>
 </head>
 <body>
+  <header><h1>Lokasi Masjid</h1></header>
 
-<header>
-  <h1>Profil Masjid Jamie Nurul Baher</h1>
-</header>
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="jadwal.html">Jadwal</a>
+    <a href="phbi.html">PHBI</a>
+    <a href="keuangan.html">Keuangan</a>
+    <a href="kegiatan.html">Kegiatan</a>
+    <a href="lokasi.html">Lokasi</a>
+    <a href="galeri.html">Galeri</a>
+    <a href="kontak.html">Kontak</a>
+  </nav>
 
-<nav>
-  <a href="index.html">Beranda</a>
-  <a href="profil.html">Profil</a>
-  <a href="jadwal.html">Jadwal</a>
-  <a href="phbi.html">PHBI</a>
-  <a href="keuangan.html">Keuangan</a>
-  <a href="kegiatan.html">Kegiatan</a>
-  <a href="lokasi.html">Lokasi</a>
-  <a href="galeri.html">Galeri</a>
-  <a href="kontak.html">Kontak</a>
-</nav>
+  <section>
+    <h2>Alamat Masjid Jamie Nurul Baher</h2>
+    <p>Jl. Lapanga bola , Desa. Pagendagn Ilir , Rt/Rw 003/002, Kec. Kronjo, Kab. Tangerang, Propinsi. Banten</p>
+  </section>
 
-<section>
-  <h2>Sejarah Singkat</h2>
-  <p>Silahkan diisi</p>
-  <h2>Visi & Misi</h2>
-  <p><strong>Visi:</strong> silahkan diisi.</p>
-  <p><strong>Misi:</strong></p>
-  <ul>
-    <li>silahkan diisi.</li>
-    <li>silahkan diisi.</li>
-    <li>silahkan diisi.</li>
-  </ul>
-</section>
-
-<footer>
-  <p>&copy; 2025 Masjid Jamie Nurul Baher</p>
-</footer>
-
+  <footer><p>&copy; 2025 Masjid Jamie Nurul Baher</p></footer>
 </body>
 </html>
